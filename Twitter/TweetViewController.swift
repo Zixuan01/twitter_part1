@@ -2,7 +2,11 @@
 //  TweetViewController.swift
 //  Twitter
 //
+<<<<<<< Updated upstream
 //  Created by Hedda on 11/15/20.
+=======
+//  Created by Hedda on 11/13/20.
+>>>>>>> Stashed changes
 //  Copyright © 2020 Dan. All rights reserved.
 //
 
@@ -15,12 +19,16 @@ class TweetViewController: UIViewController {
         tweetTextView.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
     @IBOutlet weak var tweetTextView: UITextView!
     
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+<<<<<<< Updated upstream
     @IBAction func tweet(_ sender: Any) {
         if( !tweetTextView.text.isEmpty){
             TwitterAPICaller.client?.postTweet(tweetString: tweetTextView.text, success: {
@@ -33,6 +41,20 @@ class TweetViewController: UIViewController {
                     dismiss(animated: true, completion: nil)
                 }
             }
+=======
+    
+    @IBAction func tweet(_ sender: Any) {
+        if(!tweetTextView.text.isEmpty){
+            TwitterAPICaller.client?.postTweet(tweetString: tweetTextView.text, success:{
+                self.dismiss(animated: true, completion: nil)}, failure: { (error) in
+                    print("Error posting tweet \(error)")
+                    self.dismiss(animated: true, completion:  nil)
+            })
+        }else{
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+>>>>>>> Stashed changes
     /*
     // MARK: - Navigation
 
