@@ -21,6 +21,7 @@ The following **bonus** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
 ![](https://i.imgur.com/vihm4OC.gif)
 
 # Project 3 - Twitter
